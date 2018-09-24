@@ -1,0 +1,11 @@
+﻿@page
+@model GeneralModel
+@{
+    ViewData["Title"] = "Topics";
+}
+<h2>@ViewData["Title"]</h2>
+
+@foreach (var topic in Model.Topics)
+{
+    <a asp-page="/@topic">@topic</a>
+}
