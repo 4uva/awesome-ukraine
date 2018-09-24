@@ -8,7 +8,7 @@ namespace awesome_ukraine.Pages
 {
     public class GeneralModel : PageModel
     {
-        public List<string> Topics { get; /*private set;*/ } =
+        public List<string> Topics { get; } =
             new List<string>()
             {
                 "History",
