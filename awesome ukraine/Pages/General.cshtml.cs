@@ -16,7 +16,8 @@ namespace awesome_ukraine.Pages
                 "Places",
                 "Nature",
                 "Sports",
-                "Technology"
+                "Technology",
+                "Food"
             };
 
         public void OnGet()
