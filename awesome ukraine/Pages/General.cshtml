@@ -5,7 +5,16 @@
 }
 <h2>@ViewData["Title"]</h2>
 
-@foreach (var topic in Model.Topics)
-{
-    <a asp-page="/@topic">@topic</a>
-}
+<div class="container">
+    <ul class="list-group row">
+        @foreach (var topic in Model.Topics)
+        {
+            <li class="list-group-item col-md-4">
+                <div class="topic-description-container">
+                    <div class="topic-description-img"><img src="~/images/culture.svg" alt="@topic logo" /></div>
+                    <div class="topic-description-text"><a asp-page="/@topic">@topic</a></div>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
