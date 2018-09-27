@@ -41,3 +41,18 @@ IMG.centered {
     margin-left: auto;
     margin-right: auto
 }
+
+.topic-description-container {
+    width: 200px;
+    display: block;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.topic-description-img {
+}
+
+.topic-description-text {
+    display: inline-block;
+}
