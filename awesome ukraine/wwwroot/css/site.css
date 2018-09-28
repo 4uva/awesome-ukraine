@@ -51,8 +51,15 @@ IMG.centered {
 }
 
 .topic-description-img {
+    width: 200px;
+    height: 200px;
 }
 
 .topic-description-text {
     display: inline-block;
+}
+
+.topic-description-column {
+    width: auto;
+    border: 0px;
 }

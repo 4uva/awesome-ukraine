@@ -6,14 +6,17 @@
 <h2>@ViewData["Title"]</h2>
 
 <div class="container">
-    <ul class="list-group row">
-        @foreach (var topic in Model.Topics)
+    <ul class="list-group row"> <!-- заголовок списка-->
+        @foreach (var topic in Model.Topics) // цикл по всем темам из модели
         {
-            <li class="list-group-item col-md-4">
-                <div class="topic-description-container">
-                    <div class="topic-description-img"><img src="~/images/culture.svg" alt="@topic logo" /></div>
-                    <div class="topic-description-text"><a asp-page="/@topic">@topic</a></div>
-                </div>
+            <li class="list-group-item col-md-4 topic-description-column"> <!-- элемент списка -->
+                <a asp-page="@topic.PageAddress">
+                    <div class="topic-description-container">
+                        <!-- div, содержащий картинку и текст-->
+                        <div><img src="@topic.LogoAddress" alt="@topic.Name logo" class="topic-description-img" /></div> <!-- ещё один div, содержащий только картинку -->
+                        <div class="topic-description-text">@topic.Name</div> <!-- а этот div содержит только текст -->
+                    </div> <!-- div из строки 13 закончился-->
+                </a>
             </li>
         }
     </ul>

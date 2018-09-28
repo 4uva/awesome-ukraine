@@ -4,21 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+using awesome_ukraine.Model;
+
 namespace awesome_ukraine.Pages
 {
     public class GeneralModel : PageModel
     {
-        public List<string> Topics { get; } =
-            new List<string>()
-            {
-                "History",
-                "Culture",
-                "Places",
-                "Nature",
-                "Sports",
-                "Technology",
-                "Food"
-            };
+        public IReadOnlyCollection<Section> Topics { get; } = Sections.All;
 
         public void OnGet()
         {
