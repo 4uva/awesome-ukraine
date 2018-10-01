@@ -63,3 +63,29 @@ IMG.centered {
     width: auto;
     border: 0px;
 }
+
+.carousel-img {
+    width: 300px !important;
+    height: 300px !important;
+    padding-bottom: 50px;
+}
+
+.carousel-indicators {
+    /*
+    bottom: -60px;
+    background-color: rgba(128, 128, 128, 0.40);
+    */
+    display: none;
+}
+
+.carousel-caption {
+    bottom: 0px;
+    padding-bottom: 0px;
+}
+
+/*
+.carousel-inner {
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+*/

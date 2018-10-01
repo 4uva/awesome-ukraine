@@ -23,7 +23,7 @@ namespace awesome_ukraine.DataBase
        
         public Repository (string path)
         {
-            using (TextReader textReader = File.OpenText(path)) //TextReader textReader = File.OpenText(path);
+            using (TextReader textReader = File.OpenText(path))
             {
                 using (var csv = new CsvReader(textReader))
                 {
