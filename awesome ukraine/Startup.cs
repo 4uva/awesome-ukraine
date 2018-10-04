@@ -35,6 +35,7 @@ namespace awesome_ukraine
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddSingleton(typeof(DataBase.Repository), CreateRepository());
+            services.AddSingleton<Model.Sections>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

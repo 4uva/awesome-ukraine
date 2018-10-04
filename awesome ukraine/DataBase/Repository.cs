@@ -21,7 +21,7 @@ namespace awesome_ukraine.DataBase
 
         List<Item> Database;/*field name*/
        
-        public Repository (string path)
+        public Repository(string path)
         {
             using (TextReader textReader = File.OpenText(path))
             {
@@ -33,7 +33,10 @@ namespace awesome_ukraine.DataBase
                 }
             }
         }
+
+        public IEnumerable<Item> GetSectionItems(string name)///please explain
+        {
+            return Database.Where(item => item.Section == name);
+        }
     } 
 }
-
-

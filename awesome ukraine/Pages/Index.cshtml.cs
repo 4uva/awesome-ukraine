@@ -10,7 +10,12 @@ namespace awesome_ukraine.Pages
 {
     public class IndexModel : PageModel
     {
-        public IReadOnlyCollection<Section> Topics { get; } = Sections.All;
+        public IndexModel(Sections sections)
+        {
+            Topics = sections.All;
+        }
+
+        public IReadOnlyCollection<Section> Topics { get; }
 
         public void OnGet()
         {
